@@ -1,0 +1,16 @@
+<!-- <div class='row mb-3'>
+    <div class='col-md-4 mx-auto col-10'>
+        
+    </div>
+</div> -->
+
+<form method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit' class='btn btn-mybtn'>
+        {% if btn_label %}
+            {{btn_label}}
+        {% else %}
+            Save
+        {% endif %}
+    </button>
+</form>
